@@ -5,39 +5,40 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { setCookie } from 'cookies-next';
+import Header from '../homepageComponents/header';
+import Footer from '../homepageComponents/footer';
 
 
 
+export default function LoginPage() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
+  const router = useRouter();
 
-  export default function LoginPage() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [usertype, setUsertype] = useState('user');
-    const [error, setError] = useState(null);
-  
-    const router = useRouter();
-  
-    const handleLogin = async (e) => {
-        e.preventDefault();
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-        // Simulate checking username, password, and usertype
-        if (username === 'Nayeem' && password === 'password') {
-            setCookie('token', 'admin_token_here', { path: '/' });
-            setCookie('usertype', 'admin', { path: '/' });
-            router.push('/admin'); // Redirect admin to the admin dashboard
-        } else if (username === 'NayeemIslam' && password === 'password') {
-            setCookie('token', 'user_token_here', { path: '/' });
-            setCookie('usertype', 'user', { path: '/' });
-            router.push('/user'); // Redirect standard user to the user dashboard
-        } else {
-            setError('Invalid username or password');
-        }
-    };
-  
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="p-8 bg-white shadow-lg rounded-lg max-w-md w-full">
+    // Simulate checking username and password
+    if (username === 'Nayeem' && password === 'password') {
+      setCookie('token', 'admin_token_here', { path: '/' });
+      setCookie('usertype', 'admin', { path: '/' });
+      router.push('/admin');
+    } else if (username === 'NayeemIslam' && password === 'password') {
+      setCookie('token', 'user_token_here', { path: '/' });
+      setCookie('usertype', 'user', { path: '/' });
+      router.push('/user');
+    } else {
+      setError('Invalid username or password');
+    }
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <div className="flex flex-1 items-center justify-center bg-gray-100">
+        <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
           <h2 className="text-2xl font-bold mb-6 text-center">Login to Puzzle-Panda</h2>
           <form onSubmit={handleLogin}>
             <div className="mb-4">
@@ -70,7 +71,7 @@ import { setCookie } from 'cookies-next';
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
               >
                 Sign In
               </button>
@@ -81,5 +82,7 @@ import { setCookie } from 'cookies-next';
           </form>
         </div>
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
+}
