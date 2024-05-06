@@ -7,11 +7,11 @@ const questionsData = [
       "CorrectAnswer": "Paris"
     },
     {
-      "Question": "Which of the following is a prime number?",
+      "Question": "Which of the following is a place in Bangladesh?",
       "Type": "MCQ",
-      "Options": [7, 12, 25, 31],
+      "Options": ["Dhaka", "Mumbai", "San Jose", "Washington"],
       "Duration": 20,
-      "CorrectAnswer": 31
+      "CorrectAnswer": "Dhaka"
     },
     {
       "Question": "Select the colors of the rainbow.",
