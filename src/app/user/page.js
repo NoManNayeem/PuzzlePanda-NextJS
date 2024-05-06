@@ -47,8 +47,9 @@ const UserPage = () => {
       {/* Hero */}
       <div className="flex-grow container mx-auto p-4">
         <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-          <img
-            src="https://readymadeui.com/cardImg.webp"
+          <Image width={500}
+      height={300} 
+            src="https://placehold.co/600x400"
             alt="Banner Image"
             className="absolute inset-0 w-full h-full object-cover"
           />

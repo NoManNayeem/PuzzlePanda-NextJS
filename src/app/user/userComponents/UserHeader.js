@@ -64,7 +64,8 @@ const UserHeader = () => {
                         {/* User profile section */}
                         <div className="flex-grow">
                             <div className="text-center mt-4">
-                                <Image src={userData.imageUrl} alt="User" className="rounded-full h-24 w-24 mx-auto"/>
+                                <Image width={500}
+      height={300}  src={userData.imageUrl} alt="User" className="rounded-full h-24 w-24 mx-auto"/>
                                 <h3 className="mt-2 font-bold">{userData.name}</h3>
                                 <p className="text-gray-600">{userData.email}</p>
                                 <div className="mt-4 text-left">

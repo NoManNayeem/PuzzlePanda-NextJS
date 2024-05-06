@@ -12,7 +12,7 @@ const ContactPage = () => {
             <h1 className="text-3xl font-extrabold">Need to Talk</h1>
             <p className="text-sm text-gray-400 mt-3">
                 Have some big idea or brand to develop and need help? Then reach out
-                we'd love to hear about your project and provide help.
+                we would love to hear about your project and provide help.
             </p>
             <div className="mt-12">
                 <h2 className="text-lg font-extrabold">Email</h2>

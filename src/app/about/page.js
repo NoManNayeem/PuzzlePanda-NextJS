@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "../homepageComponents/header";
 import Footer from "../homepageComponents/footer";
 import { FaGithub, FaLinkedin, FaMediumM } from "react-icons/fa";
+import Image from "next/image";
+
 
 const AboutPage = () => {
   return (
@@ -11,8 +13,9 @@ const AboutPage = () => {
       <div className="font-sans text-gray-800 p-4">
         <div className="flex flex-col items-center justify-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-extrabold text-center">Tech Maestro</h2>
-          <img
-            src="https://readymadeui.com/team-1.webp"
+          <Image width={500}
+      height={300} 
+            src="https://placehold.co/600x400"
             className="rounded-full mt-4"
             alt="Team Member"
           />

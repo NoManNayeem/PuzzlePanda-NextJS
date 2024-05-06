@@ -156,7 +156,8 @@ const TryNow = () => {
             ))}
           {currentQuestion.Type === "Image" && (
             <div>
-              <img
+              <Image width={500}
+      height={300} 
                 src={currentQuestion.URL}
                 alt="Question Image"
                 onLoad={() => setImageLoading(false)}
