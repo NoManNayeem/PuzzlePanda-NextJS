@@ -1,6 +1,5 @@
 "use client";
 
-
 // pages/userpage.js
 import { useState } from "react";
 import UserHeader from "./userComponents/UserHeader";
@@ -19,10 +18,10 @@ const UserPage = () => {
   // Dummy data for table
   const tableData = [
     {
-        name: "Nayeem Islam",
-        startDate: "2022-07-15",
-        endDate: "2022-05-27",
-      },
+      name: "Nayeem Islam",
+      startDate: "2022-07-15",
+      endDate: "2022-05-27",
+    },
     {
       name: "John Doe",
       startDate: "2022-05-15",
@@ -59,7 +58,7 @@ const UserPage = () => {
               others!
             </p>
             <a
-              href="javascript:void(0)"
+              href="/user/play-now"
               className="mt-8 bg-transparent text-white text-base font-semibold py-2.5 px-6 border-2 border-white rounded hover:bg-white hover:text-black transition duration-300 ease-in-out"
             >
               Play Now
@@ -72,16 +71,16 @@ const UserPage = () => {
           <table className="min-w-full bg-white font-[sans-serif]">
             <thead className="bg-gray-800 whitespace-nowrap">
               <tr>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                <th className="px-4 md:px-6 py-3 text-left text-sm font-semibold text-white">
                   Name
                 </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                <th className="px-4 md:px-6 py-3 text-left text-sm font-semibold text-white">
                   Start Date
                 </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                <th className="px-4 md:px-6 py-3 text-left text-sm font-semibold text-white">
                   End Date
                 </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-white">
+                <th className="px-4 md:px-6 py-3 text-left text-sm font-semibold text-white">
                   Details
                 </th>
               </tr>
@@ -89,10 +88,12 @@ const UserPage = () => {
             <tbody className="whitespace-nowrap divide-y divide-gray-200">
               {tableData.map((item, index) => (
                 <tr key={index} className="hover:bg-sky-100">
-                  <td className="px-6 py-4 text-sm">{item.name}</td>
-                  <td className="px-6 py-4 text-sm">{item.startDate}</td>
-                  <td className="px-6 py-4 text-sm">{item.endDate}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-4 md:px-6 py-4 text-sm">{item.name}</td>
+                  <td className="px-4 md:px-6 py-4 text-sm">
+                    {item.startDate}
+                  </td>
+                  <td className="px-4 md:px-6 py-4 text-sm">{item.endDate}</td>
+                  <td className="px-4 md:px-6 py-4">
                     <button
                       className="mr-4"
                       title="Edit"
@@ -133,9 +134,12 @@ const UserPage = () => {
             </div>
             <div className="my-6">
               <p className="text-sm">
-                Winner: {campaignData.winner}<br />
-                First Runner Up: {campaignData.firstRunnerUp}<br />
-                Second Runner Up: {campaignData.secondRunnerUp}<br />
+                Winner: {campaignData.winner}
+                <br />
+                First Runner Up: {campaignData.firstRunnerUp}
+                <br />
+                Second Runner Up: {campaignData.secondRunnerUp}
+                <br />
                 Campaign Ends: {campaignData.campaignEnds}
               </p>
             </div>

@@ -1,0 +1,85 @@
+import React from "react";
+import UserHeader from "../userComponents/UserHeader";
+import UserFooter from "../userComponents/UserFooter";
+
+const PlayNowPage = () => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <UserHeader />
+
+      <div class="font-[sans-serif] text-[#333] min-h-screen mb-4">
+        <div class="lg:max-w-5xl sm:max-w-2xl max-sm:max-w-sm mx-auto text-center ">
+          <h2 class="text-center text-2xl font-extrabold border-b-2 border-[#333] inline-block">
+            Campaigns
+          </h2>
+          <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 max-md:justify-center mt-8">
+            <div class="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+              <div class="px-4 my-6">
+                <h3 class="text-lg font-semibold">Heading</h3>
+                <p class="mt-2 text-sm text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  auctor auctor arcu, at fermentum dui. Maecenas
+                </p>
+                <button
+                  type="button"
+                  class="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+              <div class="px-4 my-6">
+                <h3 class="text-lg font-semibold">Heading</h3>
+                <p class="mt-2 text-sm text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  auctor auctor arcu, at fermentum dui. Maecenas
+                </p>
+                <button
+                  type="button"
+                  class="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+              <div class="px-4 my-6">
+                <h3 class="text-lg font-semibold">Heading</h3>
+                <p class="mt-2 text-sm text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  auctor auctor arcu, at fermentum dui. Maecenas
+                </p>
+                <button
+                  type="button"
+                  class="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
+              <div class="px-4 my-6">
+                <h3 class="text-lg font-semibold">Heading</h3>
+                <p class="mt-2 text-sm text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  auctor auctor arcu, at fermentum dui. Maecenas
+                </p>
+                <button
+                  type="button"
+                  class="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <UserFooter />
+    </div>
+  );
+};
+
+export default PlayNowPage;

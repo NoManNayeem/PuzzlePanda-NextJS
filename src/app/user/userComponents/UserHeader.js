@@ -2,6 +2,7 @@
 
 // components/Header.js
 import { useState } from 'react';
+import Link from 'next/link';
 import { MdMenu, MdClose } from 'react-icons/md';  // Importing icons from React Icons
 import { FaUserAlt, FaEnvelope, FaPhone, FaBirthdayCake, FaSignOutAlt } from 'react-icons/fa'; // Additional icons for profile details
 import { deleteCookie } from 'cookies-next';
@@ -26,7 +27,7 @@ const UserHeader = () => {
 
     // Dummy logout function
     const handleLogout = () => {
-        alert("Do you want to Logout?"); // Replace with your actual logout logic
+        alert("Logging out?"); // Replace with your actual logout logic
         
         // Remove the cookies or any other authentication tokens
         deleteCookie('token');
@@ -42,7 +43,7 @@ const UserHeader = () => {
         <>
             <nav className="bg-gradient-to-r from-blue-800 to-purple-800 text-white p-4">
                 <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-lg font-bold">Puzzle Panda</h1>
+                    <h1 className="text-lg font-bold"><Link href="/"> Puzzle-Panda </Link></h1>
                     <button onClick={() => setSidebarOpen(true)} className="text-white">
                         <MdMenu className="h-6 w-6" /> {/* Menu icon */}
                     </button>

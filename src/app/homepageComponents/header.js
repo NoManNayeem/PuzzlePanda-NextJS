@@ -14,6 +14,10 @@ export default function Header() {
           </Link>
         </h1>
         <nav className="text-sm md:text-base flex items-center">
+          <Link href="/try-now" className="px-2 md:px-3 hover:underline flex items-center">
+            <i className="far fa-question-circle mr-1"></i> {/* Info Icon */}
+            Try-Now
+          </Link>
           <Link href="/about" className="px-2 md:px-3 hover:underline flex items-center">
             <i className="far fa-question-circle mr-1"></i> {/* Info Icon */}
             About
