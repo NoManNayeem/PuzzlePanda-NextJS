@@ -2,7 +2,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['readymadeui.com', 'images.unsplash.com', 'placehold.co'],
+        dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ['readymadeui.com', 'images.unsplash.com', 'placehold.co', 'media.licdn.com'],
     },
 };
 

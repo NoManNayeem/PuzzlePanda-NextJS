@@ -15,7 +15,7 @@ const AboutPage = () => {
           <h2 className="text-4xl font-extrabold text-center">Tech Maestro</h2>
           <Image width={500}
       height={300} 
-            src="https://placehold.co/600x400"
+            src="https://media.licdn.com/dms/image/D5603AQESAGEJbJ0Qtg/profile-displayphoto-shrink_200_200/0/1706279532919?e=2147483647&v=beta&t=TIj9zW0WYaz7l9hgx3ZBr62hWho6EUa1yn3dtvQG4iI"
             className="rounded-full mt-4"
             alt="Team Member"
           />
