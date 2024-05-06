@@ -9,7 +9,7 @@ const PlayNowPage = () => {
 
       <div className="font-[sans-serif] text-[#333] min-h-screen mb-4">
         <div className="lg:max-w-5xl sm:max-w-2xl max-sm:max-w-sm mx-auto text-center ">
-          <h2 className="text-center text-2xl font-extrabold border-b-2 border-[#333] inline-block">
+          <h2 className="text-center text-2xl font-extrabold border-b-2 border-[#333] inline-block mt-2">
             Campaigns
           </h2>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 max-md:justify-center mt-8">
