@@ -8,6 +8,10 @@ import { FaArrowRight } from "react-icons/fa";
 import Countdown from "react-countdown";
 import questionsData from "./data";
 
+import Image from "next/image";
+
+
+
 const TryNow = () => {
   const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

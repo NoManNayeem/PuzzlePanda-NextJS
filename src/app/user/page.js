@@ -6,6 +6,9 @@ import UserHeader from "./userComponents/UserHeader";
 import UserFooter from "./userComponents/UserFooter";
 import { FaCirclePlay } from "react-icons/fa6";
 
+import Image from "next/image";
+
+
 const UserPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [campaignData, setCampaignData] = useState({
