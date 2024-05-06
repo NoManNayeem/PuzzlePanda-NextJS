@@ -49,7 +49,7 @@ const UserPage = () => {
         <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
           <Image width={500}
       height={300} 
-            src="https://placehold.co/600x400"
+            src="https://images.unsplash.com/photo-1690885732016-f44e973ed3bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Banner Image"
             className="absolute inset-0 w-full h-full object-cover"
           />
