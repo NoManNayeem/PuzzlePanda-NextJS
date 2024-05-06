@@ -15,61 +15,49 @@ const PlayNowPage = () => {
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 max-md:justify-center mt-8">
             <div className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
               <div className="px-4 my-6">
-                <h3 className="text-lg font-semibold">Heading</h3>
-                <p className="mt-2 text-sm text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  auctor auctor arcu, at fermentum dui. Maecenas
-                </p>
+                <h3 className="text-lg font-semibold">Campaign Name</h3>
+                <p className="mt-2 text-sm text-gray-400">Campaign Details: Lucky Winner will get BDT 500/- Recharge</p>
                 <button
                   type="button"
                   className="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
                 >
-                  View
+                  Play
                 </button>
               </div>
             </div>
             <div className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
               <div className="px-4 my-6">
-                <h3 className="text-lg font-semibold">Heading</h3>
-                <p className="mt-2 text-sm text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  auctor auctor arcu, at fermentum dui. Maecenas
-                </p>
+                <h3 className="text-lg font-semibold">Campaign Name</h3>
+                <p className="mt-2 text-sm text-gray-400">Campaign Details: Lucky Winner will get BDT 500/- Recharge</p>
                 <button
                   type="button"
                   className="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
                 >
-                  View
+                  Play
                 </button>
               </div>
             </div>
             <div className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
               <div className="px-4 my-6">
-                <h3 className="text-lg font-semibold">Heading</h3>
-                <p className="mt-2 text-sm text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  auctor auctor arcu, at fermentum dui. Maecenas
-                </p>
+                <h3 className="text-lg font-semibold">Campaign Name</h3>
+                <p className="mt-2 text-sm text-gray-400">Campaign Details: Lucky Winner will get BDT 500/- Recharge</p>
                 <button
                   type="button"
                   className="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
                 >
-                  View
+                  Play
                 </button>
               </div>
             </div>
             <div className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
               <div className="px-4 my-6">
-                <h3 className="text-lg font-semibold">Heading</h3>
-                <p className="mt-2 text-sm text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  auctor auctor arcu, at fermentum dui. Maecenas
-                </p>
+                <h3 className="text-lg font-semibold">Campaign Name</h3>
+                <p className="mt-2 text-sm text-gray-400">Campaign Details: Lucky Winner will get BDT 500/- Recharge</p>
                 <button
                   type="button"
                   className="px-6 py-2 mt-4 w-full rounded text-white text-sm tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
                 >
-                  View
+                  Play
                 </button>
               </div>
             </div>
