@@ -26,6 +26,10 @@ export default function Header() {
             <i className="far fa-envelope mr-1"></i> {/* Envelope Icon */}
             Contact
           </Link>
+          <Link href="/blogs" className="px-2 md:px-3 hover:underline flex items-center">
+            <i className="far fa-envelope mr-1"></i> {/* Envelope Icon */}
+            Blogs
+          </Link>
         </nav>
       </div>
     </header>
