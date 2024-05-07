@@ -21,7 +21,7 @@ const AboutPage = () => {
           />
 
           <div className="text-center bg-gray-50 text-gray-800 px-8 py-8 w-full rounded-lg">
-            <h1 className="text-4xl font-extrabold">Nayeem Islam!</h1>
+            <h1 className="text-4xl font-extrabold">Nayeem Islam</h1>
             <p className="mt-4 text-sm text-gray-500 mb-2">
               Project Lead || Software Engineer || Generative AI Expert
             </p>
