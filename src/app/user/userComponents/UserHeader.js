@@ -32,17 +32,22 @@ const UserHeader = () => {
     puzzlesInProgress: 5,
   };
 
-  // Dummy logout function
-  const handleLogout = () => {
-    alert("Logging out?"); // Replace with your actual logout logic
+  const handleLogout = async () => {
+    // Prompt the user to confirm they want to logout
+    if (!confirm("Are you sure you want to log out?")) {
+      return;
+    }
 
     // Remove the cookies or any other authentication tokens
     deleteCookie("token");
     deleteCookie("usertype");
 
+    // Assuming `setSidebarOpen` updates a state that controls the sidebar
     setSidebarOpen(false);
+
     // Redirect to the login page or homepage
-    router.push("/");
+    const router = useRouter();
+    router.push("/login");
   };
 
   return (
