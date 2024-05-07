@@ -46,7 +46,6 @@ const UserHeader = () => {
     setSidebarOpen(false);
 
     // Redirect to the login page or homepage
-    const router = useRouter();
     router.push("/login");
   };
 

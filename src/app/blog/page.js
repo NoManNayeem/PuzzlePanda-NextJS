@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Header from '@/app/homepageComponents/header';
 import Footer from '@/app/homepageComponents/footer';
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 
 
