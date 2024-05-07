@@ -49,6 +49,12 @@ const PlayNowPage = () => {
             <div className="bg-white shadow-[0_2px_18px_-6px_rgba(0,0,0,0.2)] w-full max-w-sm rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
               <div className="px-4 my-6">
                 <h3 className="text-lg font-semibold">Campaign Name</h3>
+                  <Image
+                    src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                 <p className="mt-2 text-sm text-gray-400">
                   Campaign Details: Lucky Winner will get BDT 500/- Recharge
                 </p>
