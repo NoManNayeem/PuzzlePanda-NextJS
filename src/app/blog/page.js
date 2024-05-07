@@ -52,6 +52,7 @@ const BlogPage = () => {
         </div>
       </div>
       <Footer />
+      
     </div>
   );
 };
