@@ -2,7 +2,7 @@
 
 // Header component
 import Link from 'next/link';
-import { FaPuzzlePiece, FaQuestionCircle, FaEnvelope, FaNewspaper } from 'react-icons/fa';
+import { FaPuzzlePiece, FaQuestionCircle, FaEnvelope, FaNewspaper,FaInfo } from 'react-icons/fa';
 
 
 
@@ -19,7 +19,7 @@ export default function Header() {
         </h1>
         <nav className="text-sm md:text-base flex items-center space-x-4">
           <NavLink href="/try-now" icon={<FaQuestionCircle className="text-blue-400" />}>Try Now</NavLink>
-          <NavLink href="/about" icon={<FaQuestionCircle className="text-blue-400" />}>About</NavLink>
+          <NavLink href="/about" icon={<FaInfo className="text-red-400" />}>About</NavLink>
           <NavLink href="/contact" icon={<FaEnvelope className="text-green-400" />}>Contact</NavLink>
           <NavLink href="/blogs" icon={<FaNewspaper className="text-purple-400" />}>Blogs</NavLink>
         </nav>
