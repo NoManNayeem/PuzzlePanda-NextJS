@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 
 
+
 const BlogPage = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-blue-500 to-teal-500">
