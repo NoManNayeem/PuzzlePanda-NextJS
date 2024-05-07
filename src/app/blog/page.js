@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
-import { Iframe } from 'react-iframe';
 import Header from '@/app/homepageComponents/header';
 import Footer from '@/app/homepageComponents/footer';
 import Link from 'next/link';
@@ -52,7 +51,7 @@ const BlogPage = () => {
         </div>
       </div>
       <Footer />
-      
+
     </div>
   );
 };
