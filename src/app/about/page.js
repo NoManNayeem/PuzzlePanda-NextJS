@@ -30,7 +30,7 @@ const AboutPage = () => {
               Project Lead || Software Engineer || Generative AI Expert
             </p>
             <div className="flex justify-center space-x-4">
-              <Link href="https://github.com/NoManNayeem/" className="inline-flex items-center px-6 py-3 rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/NoManNayeem/" className="inline-flex items-center px-6 py-3 rounded text-white bg-gray-900 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2" target="_blank" rel="noopener noreferrer">
                   <FaGithub className="mr-2" />
                   GitHub
               </Link>
