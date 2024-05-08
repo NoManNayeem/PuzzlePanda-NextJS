@@ -40,6 +40,7 @@ const AdminHeader = () => {
     // Remove the cookies or any other authentication tokens
     deleteCookie("token");
     deleteCookie("usertype");
+    deleteCookie("refreshToken");
 
     // Assuming `setSidebarOpen` updates a state that controls the sidebar
     setSidebarOpen(false);

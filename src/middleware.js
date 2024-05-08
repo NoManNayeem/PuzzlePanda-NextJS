@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getCookie } from 'cookies-next';
 
+
 // Specify routes for admin and regular users
 const adminProtectedRoutes = ['/admin'];
 const userProtectedRoutes = ['/user'];
@@ -28,14 +29,14 @@ export default async function middleware(req) {
     }
 
     // If the user is authenticated, ensure they have the correct userType for the route
-    if ((isAdminRoute && userType !== 'admin') || (isUserRoute && userType !== 'user')) {
+    if ((isAdminRoute && userType !== 'Admin') || (isUserRoute && userType !== 'User')) {
       return NextResponse.redirect(new URL('/login', req.url));
     }
   }
 
   // Redirect authenticated users away from public pages to their dashboards
   if (publicRoutes.includes(pathname) && token) {
-    const dashboardUrl = userType === 'admin' ? '/admin' : '/user';
+    const dashboardUrl = userType === 'Admin' ? '/admin' : '/user';
     return NextResponse.redirect(new URL(dashboardUrl, req.url));
   }
 

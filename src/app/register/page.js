@@ -1,15 +1,51 @@
+'use client'
+
 import Link from 'next/link';
 import Header from '../homepageComponents/header';
 import Footer from '../homepageComponents/footer';
+import { useState } from 'react';
+import axios from 'axios';
+import { registerURL } from '../BackendServer/API';
+
+
+
 
 export default function RegisterPage() {
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    phone: '',
+    operator: ''
+  });
+
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevents the default form submission behavior
+    try {
+      const response = await axios.post(registerURL, formData);
+      console.log('Registration Successful:', response.data);
+      // Redirect or show success message
+    } catch (error) {
+      console.error('Registration Failed:', error.response.data);
+      // Handle errors or show error message
+    }
+  };
+
+
+
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header/>
       <div className="flex flex-1 items-center justify-center bg-gray-100">
         <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
           <h2 className="text-2xl font-bold mb-6 text-center">Register for Puzzle-Panda</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                 Username
@@ -19,6 +55,8 @@ export default function RegisterPage() {
                 type="text"
                 placeholder="Choose a username"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={formData.username}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -30,6 +68,34 @@ export default function RegisterPage() {
                 type="email"
                 placeholder="Your email address"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                Phone
+              </label>
+              <input
+                id="phone"
+                type="text"
+                placeholder="Your phone number"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="operator">
+                Operator
+              </label>
+              <input
+                id="operator"
+                type="text"
+                placeholder="Your phone operator"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={formData.operator}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-6">
@@ -41,6 +107,8 @@ export default function RegisterPage() {
                 type="password"
                 placeholder="Create a password"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                value={formData.password}
+                onChange={handleChange}
               />
             </div>
             <div className="flex items-center justify-between">
@@ -51,7 +119,7 @@ export default function RegisterPage() {
                 Register
               </button>
               <Link href="/login" className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
-                Already have an account? Login
+                  Already have an account? Login 
               </Link>
             </div>
           </form>

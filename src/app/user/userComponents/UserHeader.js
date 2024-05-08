@@ -13,12 +13,13 @@ import {
 } from "react-icons/fa"; // Additional icons for profile details
 import { deleteCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
-
+import { profileURL } from "@/app/BackendServer/API";
 import Image from "next/image";
 
 const UserHeader = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
+  
 
   // Dummy user data
   const userData = {
@@ -41,6 +42,7 @@ const UserHeader = () => {
     // Remove the cookies or any other authentication tokens
     deleteCookie("token");
     deleteCookie("usertype");
+    deleteCookie("refreshToken");
 
     // Assuming `setSidebarOpen` updates a state that controls the sidebar
     setSidebarOpen(false);

@@ -7,8 +7,8 @@ import { useRouter } from 'next/navigation'
 import { setCookie } from 'cookies-next';
 import Header from '../homepageComponents/header';
 import Footer from '../homepageComponents/footer';
-
-
+import { loginURL } from '../BackendServer/API';
+import axios from 'axios';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -19,20 +19,42 @@ export default function LoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+  
+    try {
+      // Send a POST request to the login URL with username and password
+      const response = await axios.post(loginURL, {
+        username: username,
+        password: password
+      });
 
-    // Simulate checking username and password
-    if (username === 'Nayeem' && password === 'password') {
-      setCookie('token', 'admin_token_here', { path: '/' });
-      setCookie('usertype', 'admin', { path: '/' });
-      router.push('/admin');
-    } else if (username === 'NayeemIslam' && password === 'password') {
-      setCookie('token', 'user_token_here', { path: '/' });
-      setCookie('usertype', 'user', { path: '/' });
-      router.push('/user');
-    } else {
+      if (response.status === 200) {
+        // Destructure the data from response
+        const { refresh, access, user_type } = response.data;
+    
+        // Set cookies for tokens and user type
+        setCookie('refreshToken', refresh, { path: '/' });
+        setCookie('token', access, { path: '/' });
+        setCookie('usertype', user_type, { path: '/' });
+    
+        // Redirect based on user type
+        if (user_type === 'Admin') {
+          router.push('/admin');
+        } else if (user_type === 'User') {
+          router.push('/user');
+        } else {
+          throw new Error('Unhandled user type');
+        }
+      } else {
+        // Handle non-200 responses
+        throw new Error('Login failed with status: ' + response.status);
+      }
+    } catch (error) {
+      // Handle errors, such as network issues or invalid credentials
       setError('Invalid username or password');
+      console.error('Login error:', error);
     }
   };
+
 
   return (
     <div className="flex flex-col min-h-screen">
