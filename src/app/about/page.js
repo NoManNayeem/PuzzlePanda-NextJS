@@ -20,7 +20,7 @@ const AboutPage = () => {
               src={profileImage}
               alt="Picture of the Engineer"
               layout="fit"
-              objectFit="cover"
+              style={{ objectFit: 'cover' }} 
             />
             </Link>
           </div>

@@ -8,7 +8,6 @@ import NavLink from './NavLink'; // Assume NavLink is now in its own file
 const navItems = [
   { href: '/try-now', icon: FaFantasyFlightGames, label: 'Try Now', color: 'text-blue-400' },
   { href: '/about', icon: FaInfo, label: 'About', color: 'text-red-400' },
-  { href: '/contact', icon: FaEnvelope, label: 'Contact', color: 'text-green-400' },
   { href: '/blogs', icon: FaNewspaper, label: 'Blogs', color: 'text-purple-400' },
 ];
 
